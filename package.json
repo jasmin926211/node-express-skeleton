@@ -1,0 +1,49 @@
+{
+  "name": "skeleton-nodejs",
+  "version": "1.0.0",
+  "description": "This is a skeleton structure for nodejs backend applications, backed by express server",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node server.js",
+    "start:prod": "export NODE_ENV=production && babel-node server.js",
+    "start:stag": "export NODE_ENV=staging && babel-node  server.js",
+    "test": "mocha --recursive",
+    "test-with-coverage": "nyc --reporter=html --reporter=text mocha --recursive"
+  },
+  "keywords": [
+    "nodejs",
+    "backend",
+    "server",
+    "node",
+    "service"
+  ],
+  "author": "Jasmin Thummar",
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/node": "^6.2.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "config": "^3.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "joi": "^17.1.1",
+    "mocha": "^8.0.1",
+    "mongoose": "^5.9.22",
+    "nodemailer": "^6.4.10",
+    "nodemon": "^2.0.4",
+    "nyc": "^15.1.0",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.5.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/register": "^7.12.1",
+    "babel-plugin-module-resolver": "^4.0.0"
+  }
+}
